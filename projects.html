@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project Management - BuildConnect</title>
+    <title data-translate="project_management">Project Management - BuildConnect</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
@@ -45,10 +45,10 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
                         </svg>
                     </button>
-                    <h1 class="text-2xl font-bold text-gray-800">Project Management</h1>
+                    <h1 class="text-2xl font-bold text-gray-800" data-translate="project_management">Project Management</h1>
                 </div>
                 <div class="flex items-center space-x-3">
-                    <button onclick="showNewProjectForm()" class="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-lg font-semibold transition-colors">
+                    <button onclick="showNewProjectForm()" class="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-lg font-semibold transition-colors" data-translate="new_project">
                         New Project
                     </button>
                     <button class="p-2 hover:bg-gray-100 rounded-lg transition-colors">
@@ -67,19 +67,19 @@
             <div class="grid grid-cols-4 gap-4">
                 <div class="text-center">
                     <div class="text-2xl font-bold text-red-600" id="active-projects">5</div>
-                    <div class="text-sm text-gray-600">Active</div>
+                    <div class="text-sm text-gray-600" data-translate="active">Active</div>
                 </div>
                 <div class="text-center">
                     <div class="text-2xl font-bold text-yellow-600" id="planning-projects">3</div>
-                    <div class="text-sm text-gray-600">Planning</div>
+                    <div class="text-sm text-gray-600" data-translate="planning">Planning</div>
                 </div>
                 <div class="text-center">
                     <div class="text-2xl font-bold text-green-600" id="completed-projects">12</div>
-                    <div class="text-sm text-gray-600">Completed</div>
+                    <div class="text-sm text-gray-600" data-translate="completed">Completed</div>
                 </div>
                 <div class="text-center">
                     <div class="text-2xl font-bold text-blue-600" id="total-value">$485K</div>
-                    <div class="text-sm text-gray-600">Total Value</div>
+                    <div class="text-sm text-gray-600" data-translate="total_value">Total Value</div>
                 </div>
             </div>
         </div>
@@ -89,22 +89,22 @@
     <section class="bg-white border-b border-gray-200 sticky top-16 z-30">
         <div class="container mx-auto px-6 py-4">
             <div class="flex space-x-2 overflow-x-auto">
-                <button onclick="filterProjects('all')" class="filter-btn filter-active px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap transition-all">
+                <button onclick="filterProjects('all')" class="filter-btn filter-active px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap transition-all" data-translate="all_projects">
                     All Projects
                 </button>
-                <button onclick="filterProjects('planning')" class="filter-btn px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap bg-gray-100 text-gray-700 hover:bg-gray-200 transition-all">
+                <button onclick="filterProjects('planning')" class="filter-btn px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap bg-gray-100 text-gray-700 hover:bg-gray-200 transition-all" data-translate="planning">
                     Planning
                 </button>
-                <button onclick="filterProjects('design')" class="filter-btn px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap bg-gray-100 text-gray-700 hover:bg-gray-200 transition-all">
+                <button onclick="filterProjects('design')" class="filter-btn px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap bg-gray-100 text-gray-700 hover:bg-gray-200 transition-all" data-translate="design">
                     Design
                 </button>
-                <button onclick="filterProjects('materials')" class="filter-btn px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap bg-gray-100 text-gray-700 hover:bg-gray-200 transition-all">
+                <button onclick="filterProjects('materials')" class="filter-btn px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap bg-gray-100 text-gray-700 hover:bg-gray-200 transition-all" data-translate="materials">
                     Materials
                 </button>
-                <button onclick="filterProjects('construction')" class="filter-btn px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap bg-gray-100 text-gray-700 hover:bg-gray-200 transition-all">
+                <button onclick="filterProjects('construction')" class="filter-btn px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap bg-gray-100 text-gray-700 hover:bg-gray-200 transition-all" data-translate="construction">
                     Construction
                 </button>
-                <button onclick="filterProjects('completed')" class="filter-btn px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap bg-gray-100 text-gray-700 hover:bg-gray-200 transition-all">
+                <button onclick="filterProjects('completed')" class="filter-btn px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap bg-gray-100 text-gray-700 hover:bg-gray-200 transition-all" data-translate="completed">
                     Completed
                 </button>
             </div>
@@ -124,30 +124,30 @@
             <!-- Project Timeline Sidebar -->
             <div class="lg:col-span-1">
                 <div class="timeline-container rounded-xl p-6 sticky top-32">
-                    <h3 class="text-xl font-bold text-gray-800 mb-6">Project Timeline</h3>
+                    <h3 class="text-xl font-bold text-gray-800 mb-6" data-translate="project_timeline">Project Timeline</h3>
                     <div id="timeline-chart" class="h-64 mb-6"></div>
                     
                     <div class="space-y-4">
-                        <h4 class="font-semibold text-gray-800">Quick Actions</h4>
+                        <h4 class="font-semibold text-gray-800" data-translate="quick_actions">Quick Actions</h4>
                         <div class="space-y-2">
                             <button onclick="showNewProjectForm()" class="w-full text-left p-3 bg-white rounded-lg hover:bg-gray-50 transition-colors">
-                                <div class="font-medium text-gray-800">Create New Project</div>
-                                <div class="text-sm text-gray-600">Start a new construction project</div>
+                                <div class="font-medium text-gray-800" data-translate="create_new_project">Create New Project</div>
+                                <div class="text-sm text-gray-600" data-translate="start_construction">Start a new construction project</div>
                             </button>
                             <button onclick="uploadDocuments()" class="w-full text-left p-3 bg-white rounded-lg hover:bg-gray-50 transition-colors">
-                                <div class="font-medium text-gray-800">Upload Documents</div>
-                                <div class="text-sm text-gray-600">Add plans, permits, or photos</div>
+                                <div class="font-medium text-gray-800" data-translate="upload_documents">Upload Documents</div>
+                                <div class="text-sm text-gray-600" data-translate="add_plans">Add plans, permits, or photos</div>
                             </button>
                             <button onclick="requestQuote()" class="w-full text-left p-3 bg-white rounded-lg hover:bg-gray-50 transition-colors">
-                                <div class="font-medium text-gray-800">Request Quote</div>
-                                <div class="text-sm text-gray-600">Get material estimates</div>
+                                <div class="font-medium text-gray-800" data-translate="request_quote">Request Quote</div>
+                                <div class="text-sm text-gray-600" data-translate="get_material_estimates">Get material estimates</div>
                             </button>
                         </div>
                     </div>
 
                     <!-- Recent Activity -->
                     <div class="mt-8">
-                        <h4 class="font-semibold text-gray-800 mb-4">Recent Activity</h4>
+                        <h4 class="font-semibold text-gray-800 mb-4" data-translate="recent_activity">Recent Activity</h4>
                         <div class="space-y-3" id="recent-activity">
                             <div class="flex items-start space-x-3">
                                 <div class="w-2 h-2 bg-green-500 rounded-full mt-2"></div>
@@ -185,7 +185,7 @@
         <div class="flex items-center justify-center min-h-screen p-4">
             <div class="bg-white rounded-xl max-w-md w-full p-6">
                 <div class="flex items-center justify-between mb-6">
-                    <h3 class="text-xl font-bold text-gray-800">Create New Project</h3>
+                    <h3 class="text-xl font-bold text-gray-800" data-translate="create_new_project">Create New Project</h3>
                     <button onclick="hideNewProjectForm()" class="p-2 hover:bg-gray-100 rounded-lg transition-colors">
                         <svg class="w-5 h-5 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
@@ -232,10 +232,10 @@
                     </div>
                     
                     <div class="flex space-x-3 pt-4">
-                        <button type="submit" class="flex-1 bg-red-600 hover:bg-red-700 text-white py-3 rounded-lg font-semibold transition-colors">
+                        <button type="submit" class="flex-1 bg-red-600 hover:bg-red-700 text-white py-3 rounded-lg font-semibold transition-colors" data-translate="create_project">
                             Create Project
                         </button>
-                        <button type="button" onclick="hideNewProjectForm()" class="flex-1 border-2 border-gray-300 text-gray-700 hover:bg-gray-50 py-3 rounded-lg font-semibold transition-colors">
+                        <button type="button" onclick="hideNewProjectForm()" class="flex-1 border-2 border-gray-300 text-gray-700 hover:bg-gray-50 py-3 rounded-lg font-semibold transition-colors" data-translate="cancel">
                             Cancel
                         </button>
                     </div>
@@ -251,25 +251,25 @@
                 <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
                     <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"/>
                 </svg>
-                <span class="text-xs font-medium">Home</span>
+                <span class="text-xs font-medium" data-translate="home">Home</span>
             </button>
             <button onclick="navigateTo('materials.html')" class="flex flex-col items-center space-y-1 text-gray-400 hover:text-white transition-colors">
                 <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
                     <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z"/>
                 </svg>
-                <span class="text-xs font-medium">Materials</span>
+                <span class="text-xs font-medium" data-translate="materials">Materials</span>
             </button>
             <button onclick="navigateTo('projects.html')" class="flex flex-col items-center space-y-1 text-white">
                 <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
                     <path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"/>
                 </svg>
-                <span class="text-xs font-medium">Projects</span>
+                <span class="text-xs font-medium" data-translate="projects">Projects</span>
             </button>
             <button onclick="navigateTo('referrals.html')" class="flex flex-col items-center space-y-1 text-gray-400 hover:text-white transition-colors">
                 <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
                     <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
                 </svg>
-                <span class="text-xs font-medium">Referrals</span>
+                <span class="text-xs font-medium" data-translate="referrals">Referrals</span>
             </button>
         </div>
     </nav>
@@ -277,6 +277,7 @@
     <!-- Add bottom padding to prevent content from being hidden behind nav -->
     <div class="h-20"></div>
 
+    <script src="translations.js"></script>
     <script src="main.js"></script>
 </body>
 </html>

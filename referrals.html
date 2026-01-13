@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Referral Rewards - BuildConnect</title>
+    <title data-translate="referral_rewards">Referral Rewards - BuildConnect</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
@@ -57,10 +57,10 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
                         </svg>
                     </button>
-                    <h1 class="text-2xl font-bold text-gray-800">Referral Rewards</h1>
+                    <h1 class="text-2xl font-bold text-gray-800" data-translate="referral_rewards">Referral Rewards</h1>
                 </div>
                 <div class="flex items-center space-x-3">
-                    <div class="tier-badge tier-gold">Gold Tier</div>
+                    <div class="tier-badge tier-gold" data-translate="gold_tier">Gold Tier</div>
                     <button class="p-2 hover:bg-gray-100 rounded-lg transition-colors">
                         <svg class="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z"/>
@@ -77,19 +77,19 @@
             <div class="grid grid-cols-4 gap-4">
                 <div class="text-center">
                     <div class="text-2xl font-bold text-blue-600" id="total-referrals">24</div>
-                    <div class="text-sm text-gray-600">Total Referrals</div>
+                    <div class="text-sm text-gray-600" data-translate="total_referrals">Total Referrals</div>
                 </div>
                 <div class="text-center">
                     <div class="text-2xl font-bold text-green-600" id="successful-referrals">18</div>
-                    <div class="text-sm text-gray-600">Successful</div>
+                    <div class="text-sm text-gray-600" data-translate="successful">Successful</div>
                 </div>
                 <div class="text-center">
                     <div class="text-2xl font-bold text-purple-600" id="reward-points">2,450</div>
-                    <div class="text-sm text-gray-600">Points</div>
+                    <div class="text-sm text-gray-600" data-translate="points">Points</div>
                 </div>
                 <div class="text-center">
                     <div class="text-2xl font-bold text-orange-600" id="total-earnings">$1,850</div>
-                    <div class="text-sm text-gray-600">Total Earned</div>
+                    <div class="text-sm text-gray-600" data-translate="total_earned">Total Earned</div>
                 </div>
             </div>
         </div>
@@ -102,11 +102,11 @@
             <div class="lg:col-span-2 space-y-8">
                 <!-- Referral Link Section -->
                 <section class="bg-white rounded-xl shadow-lg p-6">
-                    <h3 class="text-xl font-bold text-gray-800 mb-6">Your Referral Link</h3>
+                    <h3 class="text-xl font-bold text-gray-800 mb-6" data-translate="your_referral_link">Your Referral Link</h3>
                     <div class="referral-link rounded-lg p-6 text-white mb-6">
                         <div class="flex items-center justify-between mb-4">
                             <div>
-                                <div class="text-sm opacity-90">Share this link with your network</div>
+                                <div class="text-sm opacity-90" data-translate="share_link">Share this link with your network</div>
                                 <div class="text-lg font-bold">buildconnect.com/ref/BC2024-GOLD-789</div>
                             </div>
                             <div class="text-4xl opacity-50">
@@ -123,30 +123,30 @@
                                 <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
                                 <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
                             </svg>
-                            <span class="text-sm font-medium">Email</span>
+                            <span class="text-sm font-medium" data-translate="email">Email</span>
                         </button>
                         <button onclick="shareReferral('sms')" class="flex items-center justify-center space-x-2 bg-gray-100 hover:bg-gray-200 text-gray-700 py-3 rounded-lg transition-colors">
                             <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
                                 <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
                             </svg>
-                            <span class="text-sm font-medium">SMS</span>
+                            <span class="text-sm font-medium" data-translate="sms">SMS</span>
                         </button>
                         <button onclick="shareReferral('social')" class="flex items-center justify-center space-x-2 bg-gray-100 hover:bg-gray-200 text-gray-700 py-3 rounded-lg transition-colors">
                             <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
                                 <path d="M15 8a3 3 0 10-2.977-2.63l-4.94 2.47a3 3 0 100 4.319l4.94 2.47a3 3 0 10.895-1.789l-4.94-2.47a3.027 3.027 0 000-.74l4.94-2.47C13.456 7.68 14.19 8 15 8z"/>
                             </svg>
-                            <span class="text-sm font-medium">Share</span>
+                            <span class="text-sm font-medium" data-translate="share">Share</span>
                         </button>
                     </div>
                 </section>
 
                 <!-- Tier Progress -->
                 <section class="bg-white rounded-xl shadow-lg p-6">
-                    <h3 class="text-xl font-bold text-gray-800 mb-6">Tier Progress</h3>
+                    <h3 class="text-xl font-bold text-gray-800 mb-6" data-translate="tier_progress">Tier Progress</h3>
                     <div class="space-y-6">
                         <div class="flex items-center justify-between">
                             <div class="flex items-center space-x-3">
-                                <div class="tier-badge tier-bronze">Bronze</div>
+                                <div class="tier-badge tier-bronze" data-translate="bronze">Bronze</div>
                                 <span class="text-sm text-gray-600">0 - 999 pts</span>
                             </div>
                             <svg class="w-6 h-6 text-green-500" fill="currentColor" viewBox="0 0 20 20">
@@ -156,7 +156,7 @@
                         
                         <div class="flex items-center justify-between">
                             <div class="flex items-center space-x-3">
-                                <div class="tier-badge tier-silver">Silver</div>
+                                <div class="tier-badge tier-silver" data-translate="silver">Silver</div>
                                 <span class="text-sm text-gray-600">1,000 - 2,499 pts</span>
                             </div>
                             <svg class="w-6 h-6 text-green-500" fill="currentColor" viewBox="0 0 20 20">
@@ -166,23 +166,23 @@
                         
                         <div class="flex items-center justify-between">
                             <div class="flex items-center space-x-3">
-                                <div class="tier-badge tier-gold">Gold</div>
+                                <div class="tier-badge tier-gold" data-translate="gold_tier">Gold</div>
                                 <span class="text-sm text-gray-600">2,500 - 4,999 pts</span>
                             </div>
-                            <div class="text-sm font-medium text-blue-600">Current</div>
+                            <div class="text-sm font-medium text-blue-600" data-translate="current">Current</div>
                         </div>
                         
                         <div class="flex items-center justify-between">
                             <div class="flex items-center space-x-3">
-                                <div class="tier-badge tier-platinum">Platinum</div>
+                                <div class="tier-badge tier-platinum" data-translate="platinum">Platinum</div>
                                 <span class="text-sm text-gray-600">5,000+ pts</span>
                             </div>
-                            <div class="text-sm text-gray-600">2,550 pts to go</div>
+                            <div class="text-sm text-gray-600">2,550 <span data-translate="pts_to_go">pts to go</span></div>
                         </div>
                         
                         <div class="pt-4">
                             <div class="flex justify-between items-center mb-2">
-                                <span class="text-sm font-medium text-gray-700">Progress to Platinum</span>
+                                <span class="text-sm font-medium text-gray-700" data-translate="progress_to_platinum">Progress to Platinum</span>
                                 <span class="text-sm text-gray-600">49%</span>
                             </div>
                             <div class="w-full bg-gray-200 rounded-full h-3">
@@ -194,7 +194,7 @@
 
                 <!-- Referral History -->
                 <section class="bg-white rounded-xl shadow-lg p-6">
-                    <h3 class="text-xl font-bold text-gray-800 mb-6">Recent Referrals</h3>
+                    <h3 class="text-xl font-bold text-gray-800 mb-6" data-translate="recent_referrals">Recent Referrals</h3>
                     <div class="space-y-4" id="referral-history">
                         <div class="flex items-center justify-between p-4 bg-gray-50 rounded-lg">
                             <div class="flex items-center space-x-3">
@@ -254,37 +254,37 @@
             <div class="lg:col-span-1 space-y-8">
                 <!-- Rewards Catalog -->
                 <section class="bg-white rounded-xl shadow-lg p-6">
-                    <h3 class="text-xl font-bold text-gray-800 mb-6">Available Rewards</h3>
+                    <h3 class="text-xl font-bold text-gray-800 mb-6" data-translate="available_rewards">Available Rewards</h3>
                     <div class="space-y-4">
                         <div class="reward-card border border-gray-200 rounded-lg p-4">
                             <div class="flex items-center justify-between mb-2">
-                                <div class="font-medium text-gray-800">$50 Cash Bonus</div>
+                                <div class="font-medium text-gray-800" data-translate="cash_bonus">$50 Cash Bonus</div>
                                 <div class="text-sm font-bold text-purple-600">500 pts</div>
                             </div>
                             <div class="text-sm text-gray-600 mb-3">Direct cash reward for successful referrals</div>
-                            <button onclick="redeemReward('cash-50')" class="w-full bg-purple-600 hover:bg-purple-700 text-white py-2 rounded-lg text-sm font-semibold transition-colors">
+                            <button onclick="redeemReward('cash-50')" class="w-full bg-purple-600 hover:bg-purple-700 text-white py-2 rounded-lg text-sm font-semibold transition-colors" data-translate="redeem">
                                 Redeem
                             </button>
                         </div>
                         
                         <div class="reward-card border border-gray-200 rounded-lg p-4">
                             <div class="flex items-center justify-between mb-2">
-                                <div class="font-medium text-gray-800">Material Discount 15%</div>
+                                <div class="font-medium text-gray-800" data-translate="material_discount">Material Discount 15%</div>
                                 <div class="text-sm font-bold text-purple-600">750 pts</div>
                             </div>
                             <div class="text-sm text-gray-600 mb-3">15% off your next material purchase</div>
-                            <button onclick="redeemReward('discount-15')" class="w-full bg-purple-600 hover:bg-purple-700 text-white py-2 rounded-lg text-sm font-semibold transition-colors">
+                            <button onclick="redeemReward('discount-15')" class="w-full bg-purple-600 hover:bg-purple-700 text-white py-2 rounded-lg text-sm font-semibold transition-colors" data-translate="redeem">
                                 Redeem
                             </button>
                         </div>
                         
                         <div class="reward-card border border-gray-200 rounded-lg p-4">
                             <div class="flex items-center justify-between mb-2">
-                                <div class="font-medium text-gray-800">Premium Support</div>
+                                <div class="font-medium text-gray-800" data-translate="premium_support">Premium Support</div>
                                 <div class="text-sm font-bold text-purple-600">1000 pts</div>
                             </div>
                             <div class="text-sm text-gray-600 mb-3">Priority customer support for 6 months</div>
-                            <button onclick="redeemReward('premium-support')" class="w-full bg-purple-600 hover:bg-purple-700 text-white py-2 rounded-lg text-sm font-semibold transition-colors">
+                            <button onclick="redeemReward('premium-support')" class="w-full bg-purple-600 hover:bg-purple-700 text-white py-2 rounded-lg text-sm font-semibold transition-colors" data-translate="redeem">
                                 Redeem
                             </button>
                         </div>
@@ -293,7 +293,7 @@
 
                 <!-- Leaderboard -->
                 <section class="bg-white rounded-xl shadow-lg p-6">
-                    <h3 class="text-xl font-bold text-gray-800 mb-6">Monthly Leaderboard</h3>
+                    <h3 class="text-xl font-bold text-gray-800 mb-6" data-translate="monthly_leaderboard">Monthly Leaderboard</h3>
                     <div class="space-y-3">
                         <div class="leaderboard-item flex items-center justify-between p-3 rounded-lg">
                             <div class="flex items-center space-x-3">
@@ -374,7 +374,7 @@
 
                 <!-- Referral Analytics -->
                 <section class="bg-white rounded-xl shadow-lg p-6">
-                    <h3 class="text-xl font-bold text-gray-800 mb-6">Monthly Performance</h3>
+                    <h3 class="text-xl font-bold text-gray-800 mb-6" data-translate="monthly_performance">Monthly Performance</h3>
                     <div id="referral-chart" class="h-48"></div>
                 </section>
             </div>
@@ -388,25 +388,25 @@
                 <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
                     <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"/>
                 </svg>
-                <span class="text-xs font-medium">Home</span>
+                <span class="text-xs font-medium" data-translate="home">Home</span>
             </button>
             <button onclick="navigateTo('materials.html')" class="flex flex-col items-center space-y-1 text-gray-400 hover:text-white transition-colors">
                 <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
                     <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z"/>
                 </svg>
-                <span class="text-xs font-medium">Materials</span>
+                <span class="text-xs font-medium" data-translate="materials">Materials</span>
             </button>
             <button onclick="navigateTo('projects.html')" class="flex flex-col items-center space-y-1 text-gray-400 hover:text-white transition-colors">
                 <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
                     <path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"/>
                 </svg>
-                <span class="text-xs font-medium">Projects</span>
+                <span class="text-xs font-medium" data-translate="projects">Projects</span>
             </button>
             <button onclick="navigateTo('referrals.html')" class="flex flex-col items-center space-y-1 text-white">
                 <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
                     <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
                 </svg>
-                <span class="text-xs font-medium">Referrals</span>
+                <span class="text-xs font-medium" data-translate="referrals">Referrals</span>
             </button>
         </div>
     </nav>
@@ -414,6 +414,7 @@
     <!-- Add bottom padding to prevent content from being hidden behind nav -->
     <div class="h-20"></div>
 
+    <script src="translations.js"></script>
     <script src="main.js"></script>
 </body>
 </html>

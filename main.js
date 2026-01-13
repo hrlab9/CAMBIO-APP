@@ -19,7 +19,7 @@ const AppState = {
 const materialsData = [
     {
         id: 1,
-        name: 'EcoBlend Foundation Mix',
+        name: 'eco_blend',
         category: 'foundation',
         price: 45,
         image: './resources/materials-display.png',
@@ -30,7 +30,7 @@ const materialsData = [
     },
     {
         id: 2,
-        name: 'GreenStruct Wall Mix',
+        name: 'green_struct',
         category: 'structural',
         price: 52,
         image: './resources/materials-display.png',
@@ -41,7 +41,7 @@ const materialsData = [
     },
     {
         id: 3,
-        name: 'BioFinish Surface Coat',
+        name: 'bio_finish',
         category: 'decorative',
         price: 38,
         image: './resources/materials-display.png',
@@ -52,7 +52,7 @@ const materialsData = [
     },
     {
         id: 4,
-        name: 'ThermalShield Insulation',
+        name: 'thermal_shield',
         category: 'insulation',
         price: 65,
         image: './resources/materials-display.png',
@@ -63,7 +63,7 @@ const materialsData = [
     },
     {
         id: 5,
-        name: 'FlexiBond Adhesive',
+        name: 'flexi_bond',
         category: 'structural',
         price: 28,
         image: './resources/materials-display.png',
@@ -74,7 +74,7 @@ const materialsData = [
     },
     {
         id: 6,
-        name: 'AquaSeal Waterproof',
+        name: 'aqua_seal',
         category: 'foundation',
         price: 72,
         image: './resources/materials-display.png',
@@ -85,7 +85,7 @@ const materialsData = [
     },
     {
         id: 7,
-        name: 'DecorStone Veneer',
+        name: 'decor_stone',
         category: 'decorative',
         price: 85,
         image: './resources/materials-display.png',
@@ -96,7 +96,7 @@ const materialsData = [
     },
     {
         id: 8,
-        name: 'SoundGuard Acoustic',
+        name: 'sound_guard',
         category: 'insulation',
         price: 58,
         image: './resources/materials-display.png',
@@ -111,7 +111,7 @@ const materialsData = [
 const projectsData = [
     {
         id: 1,
-        name: 'Sunset Residence',
+        name: 'sunset_residence',
         type: 'Residential House',
         status: 'materials',
         budget: 125000,
@@ -123,7 +123,7 @@ const projectsData = [
     },
     {
         id: 2,
-        name: 'Downtown Office Complex',
+        name: 'downtown_office',
         type: 'Commercial Building',
         status: 'design',
         budget: 450000,
@@ -135,7 +135,7 @@ const projectsData = [
     },
     {
         id: 3,
-        name: 'Riverside Apartments',
+        name: 'riverside_apartments',
         type: 'Residential Complex',
         status: 'construction',
         budget: 680000,
@@ -147,7 +147,7 @@ const projectsData = [
     },
     {
         id: 4,
-        name: 'Tech Park Phase 1',
+        name: 'tech_park',
         type: 'Commercial Building',
         status: 'planning',
         budget: 320000,
@@ -159,7 +159,7 @@ const projectsData = [
     },
     {
         id: 5,
-        name: 'Green Valley School',
+        name: 'green_valley_school',
         type: 'Educational Facility',
         status: 'completed',
         budget: 180000,
@@ -299,7 +299,7 @@ function renderMaterialsGrid() {
     grid.innerHTML = materialsData.map(material => `
         <div class="material-card bg-white rounded-xl shadow-lg overflow-hidden" data-category="${material.category}">
             <div class="h-48 bg-gradient-to-br from-green-500 to-green-600 relative">
-                <img src="${material.image}" alt="${material.name}" class="w-full h-full object-cover opacity-80">
+                <img src="${material.image}" alt="${translate(material.name)}" class="w-full h-full object-cover opacity-80">
                 <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
                 <div class="absolute top-4 right-4">
                     <div class="flex space-x-1">
@@ -307,7 +307,7 @@ function renderMaterialsGrid() {
                     </div>
                 </div>
                 <div class="absolute bottom-4 left-4 text-white">
-                    <h3 class="text-lg font-bold">${material.name}</h3>
+                    <h3 class="text-lg font-bold">${translate(material.name)}</h3>
                     <p class="text-sm opacity-90">$${material.price}/bag</p>
                 </div>
             </div>
@@ -322,10 +322,10 @@ function renderMaterialsGrid() {
                     `).join('')}
                 </div>
                 <div class="flex space-x-2">
-                    <button onclick="addMaterialToQuote(${material.id})" class="flex-1 bg-green-600 hover:bg-green-700 text-white py-2 rounded-lg text-sm font-semibold transition-colors">
+                    <button onclick="addMaterialToQuote(${material.id})" class="flex-1 bg-green-600 hover:bg-green-700 text-white py-2 rounded-lg text-sm font-semibold transition-colors" data-translate="add_to_quote_btn">
                         Add to Quote
                     </button>
-                    <button onclick="selectMaterial(${material.id})" class="px-4 py-2 border-2 border-green-600 text-green-600 hover:bg-green-600 hover:text-white rounded-lg text-sm font-semibold transition-colors">
+                    <button onclick="selectMaterial(${material.id})" class="px-4 py-2 border-2 border-green-600 text-green-600 hover:bg-green-600 hover:text-white rounded-lg text-sm font-semibold transition-colors" data-translate="select_btn">
                         Select
                     </button>
                 </div>
@@ -362,7 +362,7 @@ function addMaterialToQuote(materialId) {
     if (material && !AppState.selectedMaterials.find(m => m.id === materialId)) {
         AppState.selectedMaterials.push(material);
         updateSelectedMaterials();
-        showNotification(`${material.name} added to quote`);
+        showNotification(`${translate(material.name)} ${translate('add_to_quote')}`);
     }
 }
 
@@ -375,7 +375,7 @@ function selectMaterial(materialId) {
             const bags = parseInt(document.getElementById('calc-bags')?.textContent) || 48;
             costEl.textContent = `$${(bags * material.price).toLocaleString()}`;
         }
-        showNotification(`${material.name} selected for calculation`);
+        showNotification(`${translate(material.name)} ${translate('select_btn')}`);
     }
 }
 
@@ -384,17 +384,17 @@ function updateSelectedMaterials() {
     if (!container) return;
     
     if (AppState.selectedMaterials.length === 0) {
-        container.innerHTML = '<div class="text-gray-500 text-sm text-center py-4">No materials selected</div>';
+        container.innerHTML = `<div class="text-gray-500 text-sm text-center py-4" data-translate="no_materials_selected">No materials selected</div>`;
         return;
     }
     
     container.innerHTML = AppState.selectedMaterials.map(material => `
         <div class="flex items-center justify-between p-3 bg-white rounded-lg border">
             <div>
-                <div class="font-medium text-gray-800">${material.name}</div>
+                <div class="font-medium text-gray-800">${translate(material.name)}</div>
                 <div class="text-sm text-gray-600">$${material.price}/bag</div>
             </div>
-            <button onclick="removeFromQuote(${material.id})" class="text-red-500 hover:text-red-700">
+            <button onclick="removeFromQuote(${material.id})" class="text-red-500 hover:text-red-700" title="${translate('remove')}">
                 <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
                     <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"/>
                 </svg>
@@ -463,34 +463,34 @@ function renderProjectsList() {
         <div class="project-card bg-white rounded-xl shadow-lg overflow-hidden" data-status="${project.status}">
             <div class="p-6">
                 <div class="flex items-center justify-between mb-4">
-                    <h3 class="text-lg font-bold text-gray-800">${project.name}</h3>
-                    <span class="status-badge status-${project.status}">${project.status.charAt(0).toUpperCase() + project.status.slice(1)}</span>
+                    <h3 class="text-lg font-bold text-gray-800">${translate(project.name)}</h3>
+                    <span class="status-badge status-${project.status}">${translate(project.status)}</span>
                 </div>
                 
                 <p class="text-gray-600 mb-4">${project.description}</p>
                 
                 <div class="grid grid-cols-2 gap-4 mb-4">
                     <div>
-                        <div class="text-sm text-gray-600">Budget</div>
+                        <div class="text-sm text-gray-600" data-translate="budget">Budget</div>
                         <div class="font-bold text-green-600">$${project.budget.toLocaleString()}</div>
                     </div>
                     <div>
-                        <div class="text-sm text-gray-600">Timeline</div>
+                        <div class="text-sm text-gray-600" data-translate="timeline">Timeline</div>
                         <div class="font-bold text-blue-600">${project.timeline} months</div>
                     </div>
                     <div>
-                        <div class="text-sm text-gray-600">Type</div>
+                        <div class="text-sm text-gray-600" data-translate="type">Type</div>
                         <div class="font-medium text-gray-800">${project.type}</div>
                     </div>
                     <div>
-                        <div class="text-sm text-gray-600">Location</div>
+                        <div class="text-sm text-gray-600" data-translate="location">Location</div>
                         <div class="font-medium text-gray-800">${project.location}</div>
                     </div>
                 </div>
                 
                 <div class="mb-4">
                     <div class="flex justify-between items-center mb-2">
-                        <span class="text-sm font-medium text-gray-700">Progress</span>
+                        <span class="text-sm font-medium text-gray-700" data-translate="progress">Progress</span>
                         <span class="text-sm text-gray-600">${project.progress}%</span>
                     </div>
                     <div class="w-full bg-gray-200 rounded-full h-2">
@@ -499,10 +499,10 @@ function renderProjectsList() {
                 </div>
                 
                 <div class="flex space-x-2">
-                    <button onclick="viewProject(${project.id})" class="flex-1 bg-red-600 hover:bg-red-700 text-white py-2 rounded-lg text-sm font-semibold transition-colors">
+                    <button onclick="viewProject(${project.id})" class="flex-1 bg-red-600 hover:bg-red-700 text-white py-2 rounded-lg text-sm font-semibold transition-colors" data-translate="view_details">
                         View Details
                     </button>
-                    <button onclick="updateProjectStatus(${project.id})" class="px-4 py-2 border-2 border-red-600 text-red-600 hover:bg-red-600 hover:text-white rounded-lg text-sm font-semibold transition-colors">
+                    <button onclick="updateProjectStatus(${project.id})" class="px-4 py-2 border-2 border-red-600 text-red-600 hover:bg-red-600 hover:text-white rounded-lg text-sm font-semibold transition-colors" data-translate="update">
                         Update
                     </button>
                 </div>
@@ -553,7 +553,7 @@ function hideNewProjectForm() {
 function viewProject(projectId) {
     const project = projectsData.find(p => p.id === projectId);
     if (project) {
-        showNotification(`Opening ${project.name} details`, 'info');
+        showNotification(`Opening ${translate(project.name)} details`, 'info');
     }
 }
 
@@ -583,11 +583,11 @@ function initializeProjectTimeline() {
             type: 'pie',
             radius: '70%',
             data: [
-                { value: 3, name: 'Planning', itemStyle: { color: '#eab308' } },
-                { value: 2, name: 'Design', itemStyle: { color: '#3b82f6' } },
-                { value: 1, name: 'Materials', itemStyle: { color: '#8b5cf6' } },
-                { value: 1, name: 'Construction', itemStyle: { color: '#f97316' } },
-                { value: 2, name: 'Completed', itemStyle: { color: '#10b981' } }
+                { value: 3, name: translate('planning'), itemStyle: { color: '#eab308' } },
+                { value: 2, name: translate('design'), itemStyle: { color: '#3b82f6' } },
+                { value: 1, name: translate('materials'), itemStyle: { color: '#8b5cf6' } },
+                { value: 1, name: translate('construction'), itemStyle: { color: '#f97316' } },
+                { value: 2, name: translate('completed'), itemStyle: { color: '#10b981' } }
             ],
             emphasis: {
                 itemStyle: {
@@ -635,15 +635,15 @@ function shareReferral(method) {
 
 function redeemReward(rewardType) {
     const rewards = {
-        'cash-50': { name: '$50 Cash Bonus', cost: 500 },
-        'discount-15': { name: '15% Material Discount', cost: 750 },
-        'premium-support': { name: 'Premium Support', cost: 1000 }
+        'cash-50': { name: 'cash_bonus', cost: 500 },
+        'discount-15': { name: 'material_discount', cost: 750 },
+        'premium-support': { name: 'premium_support', cost: 1000 }
     };
     
     const reward = rewards[rewardType];
     if (reward && AppState.user.points >= reward.cost) {
         AppState.user.points -= reward.cost;
-        showNotification(`${reward.name} redeemed successfully!`, 'success');
+        showNotification(`${translate(reward.name)} ${translate('redeem')}`, 'success');
         // Update points display
         const pointsEl = document.getElementById('reward-points');
         if (pointsEl) pointsEl.textContent = AppState.user.points.toLocaleString();
@@ -765,7 +765,7 @@ function handleNewProjectSubmission() {
     // Add to projects data
     const newProject = {
         id: projectsData.length + 1,
-        name: projectData['project-name'] || 'New Project',
+        name: projectData['project-name'] || 'new_project',
         type: projectData['project-type'] || 'Residential House',
         status: 'planning',
         budget: parseInt(projectData['project-budget']) || 100000,
@@ -792,6 +792,25 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
+
+// Function to update dynamic content when language changes
+window.updatePageTranslations = function() {
+    const currentPage = AppState.currentPage;
+    
+    switch(currentPage) {
+        case 'materials.html':
+            renderMaterialsGrid();
+            updateSelectedMaterials();
+            break;
+        case 'projects.html':
+            renderProjectsList();
+            initializeProjectTimeline();
+            break;
+        case 'referrals.html':
+            initializeReferralChart();
+            break;
+    }
+};
 
 // Export functions for global access
 window.navigateTo = navigateTo;

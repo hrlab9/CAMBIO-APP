@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BuildConnect - Construction Materials & Project Management</title>
+    <title data-translate="app_name">BuildConnect - Construction Materials & Project Management</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/splide@4.1.4/dist/js/splide.min.js"></script>
@@ -66,15 +66,15 @@
             <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">
                 Build<span class="text-gradient">Connect</span>
             </h1>
-            <p class="text-xl md:text-2xl mb-8 max-w-2xl mx-auto leading-relaxed">
+            <p class="text-xl md:text-2xl mb-8 max-w-2xl mx-auto leading-relaxed" data-translate="tagline">
                 Revolutionary cement-organic blend materials, intelligent project management, and rewarding referral system for modern construction
             </p>
             
             <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-                <button onclick="navigateTo('materials.html')" class="bg-green-600 hover:bg-green-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 w-full sm:w-auto">
+                <button onclick="navigateTo('materials.html')" class="bg-green-600 hover:bg-green-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 w-full sm:w-auto" data-translate="explore_materials">
                     Explore Materials
                 </button>
-                <button onclick="navigateTo('projects.html')" class="border-2 border-white text-white hover:bg-white hover:text-gray-800 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 w-full sm:w-auto">
+                <button onclick="navigateTo('projects.html')" class="border-2 border-white text-white hover:bg-white hover:text-gray-800 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 w-full sm:w-auto" data-translate="start_project">
                     Start Project
                 </button>
             </div>
@@ -83,15 +83,15 @@
             <div class="grid grid-cols-3 gap-6 max-w-md mx-auto">
                 <div class="text-center">
                     <div class="text-2xl font-bold text-gradient" id="stat-projects">0</div>
-                    <div class="text-sm opacity-90">Projects</div>
+                    <div class="text-sm opacity-90" data-translate="projects_stat">Projects</div>
                 </div>
                 <div class="text-center">
                     <div class="text-2xl font-bold text-gradient" id="stat-materials">0</div>
-                    <div class="text-sm opacity-90">Materials</div>
+                    <div class="text-sm opacity-90" data-translate="materials_stat">Materials</div>
                 </div>
                 <div class="text-center">
                     <div class="text-2xl font-bold text-gradient" id="stat-referrals">0</div>
-                    <div class="text-sm opacity-90">Referrals</div>
+                    <div class="text-sm opacity-90" data-translate="referrals_stat">Referrals</div>
                 </div>
             </div>
         </div>
@@ -101,10 +101,10 @@
     <section class="py-20 bg-white">
         <div class="container mx-auto px-6">
             <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4" data-translate="three_solutions">
                     Three Powerful Solutions
                 </h2>
-                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto" data-translate="solutions_desc">
                     From innovative materials to intelligent project management and rewarding referrals
                 </p>
             </div>
@@ -116,11 +116,11 @@
                         <img src="./resources/materials-display.png" alt="Sustainable Materials" class="w-full h-full object-cover opacity-80">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
                         <div class="absolute bottom-4 left-4 text-white">
-                            <h3 class="text-xl font-bold">Smart Materials</h3>
+                            <h3 class="text-xl font-bold" data-translate="smart_materials">Smart Materials</h3>
                         </div>
                     </div>
                     <div class="p-6">
-                        <p class="text-gray-600 mb-4">
+                        <p class="text-gray-600 mb-4" data-translate="browse_materials">
                             Browse our innovative cement-organic blend materials with built-in calculator and comparison tools.
                         </p>
                         <ul class="text-sm text-gray-600 space-y-2 mb-6">
@@ -128,22 +128,22 @@
                                 <svg class="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
                                     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
                                 </svg>
-                                Advanced material calculator
+                                <span data-translate="advanced_calculator">Advanced material calculator</span>
                             </li>
                             <li class="flex items-center">
                                 <svg class="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
                                     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
                                 </svg>
-                                Eco-friendly certifications
+                                <span data-translate="eco_certifications">Eco-friendly certifications</span>
                             </li>
                             <li class="flex items-center">
                                 <svg class="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
                                     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
                                 </svg>
-                                Instant quotes
+                                <span data-translate="instant_quotes">Instant quotes</span>
                             </li>
                         </ul>
-                        <button onclick="navigateTo('materials.html')" class="w-full bg-green-600 hover:bg-green-700 text-white py-3 rounded-lg font-semibold transition-colors">
+                        <button onclick="navigateTo('materials.html')" class="w-full bg-green-600 hover:bg-green-700 text-white py-3 rounded-lg font-semibold transition-colors" data-translate="explore_materials">
                             Explore Materials
                         </button>
                     </div>
@@ -155,11 +155,11 @@
                         <img src="./resources/project-site.jpg" alt="Project Management" class="w-full h-full object-cover opacity-80">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
                         <div class="absolute bottom-4 left-4 text-white">
-                            <h3 class="text-xl font-bold">Project Hub</h3>
+                            <h3 class="text-xl font-bold" data-translate="project_hub">Project Hub</h3>
                         </div>
                     </div>
                     <div class="p-6">
-                        <p class="text-gray-600 mb-4">
+                        <p class="text-gray-600 mb-4" data-translate="manage_projects">
                             Manage your construction projects from planning to completion with our intelligent tracking system.
                         </p>
                         <ul class="text-sm text-gray-600 space-y-2 mb-6">
@@ -167,22 +167,22 @@
                                 <svg class="w-4 h-4 text-red-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
                                     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
                                 </svg>
-                                Project timeline tracking
+                                <span data-translate="timeline_tracking">Project timeline tracking</span>
                             </li>
                             <li class="flex items-center">
                                 <svg class="w-4 h-4 text-red-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
                                     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
                                 </svg>
-                                Document management
+                                <span data-translate="document_management">Document management</span>
                             </li>
                             <li class="flex items-center">
                                 <svg class="w-4 h-4 text-red-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
                                     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
                                 </svg>
-                                Team collaboration
+                                <span data-translate="team_collaboration">Team collaboration</span>
                             </li>
                         </ul>
-                        <button onclick="navigateTo('projects.html')" class="w-full bg-red-600 hover:bg-red-700 text-white py-3 rounded-lg font-semibold transition-colors">
+                        <button onclick="navigateTo('projects.html')" class="w-full bg-red-600 hover:bg-red-700 text-white py-3 rounded-lg font-semibold transition-colors" data-translate="start_project">
                             Start Project
                         </button>
                     </div>
@@ -194,11 +194,11 @@
                         <img src="./resources/referral-network.png" alt="Referral Network" class="w-full h-full object-cover opacity-80">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
                         <div class="absolute bottom-4 left-4 text-white">
-                            <h3 class="text-xl font-bold">Rewards Network</h3>
+                            <h3 class="text-xl font-bold" data-translate="rewards_network">Rewards Network</h3>
                         </div>
                     </div>
                     <div class="p-6">
-                        <p class="text-gray-600 mb-4">
+                        <p class="text-gray-600 mb-4" data-translate="earn_rewards">
                             Earn rewards by connecting suppliers with buyers and generating project leads in our referral program.
                         </p>
                         <ul class="text-sm text-gray-600 space-y-2 mb-6">
@@ -206,19 +206,19 @@
                                 <svg class="w-4 h-4 text-blue-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
                                     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
                                 </svg>
-                                Tiered reward system
+                                <span data-translate="tiered_rewards">Tiered reward system</span>
                             </li>
                             <li class="flex items-center">
                                 <svg class="w-4 h-4 text-blue-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
                                     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
                                 </svg>
-                                Real-time tracking
+                                <span data-translate="realtime_tracking">Real-time tracking</span>
                             </li>
                             <li class="flex items-center">
                                 <svg class="w-4 h-4 text-blue-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
                                     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
                                 </svg>
-                                Leaderboard competition
+                                <span data-translate="leaderboard_competition">Leaderboard competition</span>
                             </li>
                         </ul>
                         <button onclick="navigateTo('referrals.html')" class="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-lg font-semibold transition-colors">
@@ -235,10 +235,10 @@
         <div class="container mx-auto px-6">
             <div class="max-w-4xl mx-auto">
                 <div class="text-center mb-12">
-                    <h2 class="text-3xl font-bold text-gray-800 mb-4">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-4" data-translate="quick_calculator">
                         Quick Material Calculator
                     </h2>
-                    <p class="text-lg text-gray-600">
+                    <p class="text-lg text-gray-600" data-translate="get_estimates">
                         Get instant estimates for your construction needs
                     </p>
                 </div>
@@ -246,15 +246,15 @@
                 <div class="bg-white rounded-xl shadow-lg p-8">
                     <div class="grid md:grid-cols-3 gap-6 mb-8">
                         <div>
-                            <label class="block text-sm font-semibold text-gray-700 mb-2">Length (m)</label>
+                            <label class="block text-sm font-semibold text-gray-700 mb-2" data-translate="length_m">Length (m)</label>
                             <input type="number" id="calc-length" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent" placeholder="10" value="10">
                         </div>
                         <div>
-                            <label class="block text-sm font-semibold text-gray-700 mb-2">Width (m)</label>
+                            <label class="block text-sm font-semibold text-gray-700 mb-2" data-translate="width_m">Width (m)</label>
                             <input type="number" id="calc-width" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent" placeholder="8" value="8">
                         </div>
                         <div>
-                            <label class="block text-sm font-semibold text-gray-700 mb-2">Height (m)</label>
+                            <label class="block text-sm font-semibold text-gray-700 mb-2" data-translate="height_m">Height (m)</label>
                             <input type="number" id="calc-height" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent" placeholder="3" value="3">
                         </div>
                     </div>
@@ -263,21 +263,21 @@
                         <div class="grid md:grid-cols-3 gap-6 text-center">
                             <div>
                                 <div class="text-2xl font-bold text-green-600" id="calc-volume">240</div>
-                                <div class="text-sm text-gray-600">Cubic Meters</div>
+                                <div class="text-sm text-gray-600" data-translate="cubic_meters">Cubic Meters</div>
                             </div>
                             <div>
                                 <div class="text-2xl font-bold text-red-600" id="calc-bags">48</div>
-                                <div class="text-sm text-gray-600">Material Bags</div>
+                                <div class="text-sm text-gray-600" data-translate="material_bags">Material Bags</div>
                             </div>
                             <div>
                                 <div class="text-2xl font-bold text-blue-600" id="calc-cost">$2,400</div>
-                                <div class="text-sm text-gray-600">Estimated Cost</div>
+                                <div class="text-sm text-gray-600" data-translate="estimated_cost">Estimated Cost</div>
                             </div>
                         </div>
                     </div>
 
                     <div class="text-center">
-                        <button onclick="navigateTo('materials.html')" class="bg-green-600 hover:bg-green-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
+                        <button onclick="navigateTo('materials.html')" class="bg-green-600 hover:bg-green-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors" data-translate="get_detailed_quote">
                             Get Detailed Quote
                         </button>
                     </div>
@@ -293,25 +293,25 @@
                 <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
                     <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"/>
                 </svg>
-                <span class="text-xs font-medium">Home</span>
+                <span class="text-xs font-medium" data-translate="home">Home</span>
             </button>
             <button onclick="navigateTo('materials.html')" class="flex flex-col items-center space-y-1 text-gray-400 hover:text-white transition-colors">
                 <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
                     <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z"/>
                 </svg>
-                <span class="text-xs font-medium">Materials</span>
+                <span class="text-xs font-medium" data-translate="materials">Materials</span>
             </button>
             <button onclick="navigateTo('projects.html')" class="flex flex-col items-center space-y-1 text-gray-400 hover:text-white transition-colors">
                 <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
                     <path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"/>
                 </svg>
-                <span class="text-xs font-medium">Projects</span>
+                <span class="text-xs font-medium" data-translate="projects">Projects</span>
             </button>
             <button onclick="navigateTo('referrals.html')" class="flex flex-col items-center space-y-1 text-gray-400 hover:text-white transition-colors">
                 <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
                     <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
                 </svg>
-                <span class="text-xs font-medium">Referrals</span>
+                <span class="text-xs font-medium" data-translate="referrals">Referrals</span>
             </button>
         </div>
     </nav>
@@ -319,6 +319,7 @@
     <!-- Add bottom padding to prevent content from being hidden behind nav -->
     <div class="h-20"></div>
 
+    <script src="translations.js"></script>
     <script src="main.js"></script>
 </body>
 </html>
